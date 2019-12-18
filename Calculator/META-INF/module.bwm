@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:schema_1576710317531="http://www.example.org/schema/1576710317531" xmlns:wsdl_1576710317451="http://www.example.org/wsdl/1576710317451" xmi:id="_WjaHcCHiEeqBUsSuxHyXEQ" targetNamespace="http://tns.tibco.com/bw/composite/Calculator" name="Calculator" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_hypnECHiEeqBUsSuxHyXEQ" name="Calculator" promote="ComponentCalculator/Calculator">
+    <sca:interface.wsdl xmi:id="_hyvtsCHiEeqBUsSuxHyXEQ" interface="http://www.example.org/wsdl/1576710317451#wsdl.interface(Calculator)" scaext:wsdlLocation="../Service%20Descriptors/Calculator.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_njx4MCHiEeqBUsSuxHyXEQ" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/964e2a08709649aa8917adf3ab19c9d7/SOAPServiceBinding" portTypeQName="wsdl_1576710317451:Calculator" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/Calculator/Service%20Descriptors/Calculator.wsdl">
+      <bindingType xmi:id="_nj83UCHiEeqBUsSuxHyXEQ"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_oZYDcCHiEeqBUsSuxHyXEQ" endpointURI="/SOAPServiceBinding/calculator/" httpConnector="calculator.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_nj-sgCHiEeqBUsSuxHyXEQ" operationName="add" action="add" actionNeeded="true">
+        <bindingType xmi:id="_nj-sgSHiEeqBUsSuxHyXEQ"/>
+        <messageConfiguration xmi:id="_nj-sgiHiEeqBUsSuxHyXEQ" messageQName="wsdl_1576710317451:addRequest" wsdlLocation="platform:/resource/Calculator/Service%20Descriptors/Calculator.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_nj-sgyHiEeqBUsSuxHyXEQ" partName="parameters" partElementName="schema_1576710317531:addRequest"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_nj-shCHiEeqBUsSuxHyXEQ" messageQName="wsdl_1576710317451:addResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/Calculator/Service%20Descriptors/Calculator.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_nj-shSHiEeqBUsSuxHyXEQ" partName="parameters" partElementName="schema_1576710317531:addResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_nj-shiHiEeqBUsSuxHyXEQ">
+          <inputMapping xmi:id="_nj_TkCHiEeqBUsSuxHyXEQ"/>
+          <outputMapping xmi:id="_nj_TkSHiEeqBUsSuxHyXEQ" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_nj_TkiHiEeqBUsSuxHyXEQ" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_XNN5cCHiEeqBUsSuxHyXEQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_XNbU0CHiEeqBUsSuxHyXEQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_XNgNUCHiEeqBUsSuxHyXEQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_XNjQoCHiEeqBUsSuxHyXEQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_XNm7ACHiEeqBUsSuxHyXEQ" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_XNqlYCHiEeqBUsSuxHyXEQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_XNtosCHiEeqBUsSuxHyXEQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_XNx6ICHiEeqBUsSuxHyXEQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_XN2LkCHiEeqBUsSuxHyXEQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_W5o2ICHiEeqBUsSuxHyXEQ" name="ComponentCalculator" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_W5pdMCHiEeqBUsSuxHyXEQ" processName="calculator.Calculator"/>
+    <sca:service xmi:id="_hylVoCHiEeqBUsSuxHyXEQ" name="Calculator">
+      <sca:interface.wsdl xmi:id="_hymjwCHiEeqBUsSuxHyXEQ" interface="http://www.example.org/wsdl/1576710317451#wsdl.interface(Calculator)" scaext:wsdlLocation="../Service%20Descriptors/Calculator.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
