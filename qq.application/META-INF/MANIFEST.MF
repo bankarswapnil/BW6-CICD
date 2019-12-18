@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Calculator Application
-Bundle-SymbolicName: Calculator.application
+Bundle-Name: Qq Application
+Bundle-SymbolicName: qq.application
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: TIBCO Software Inc.
 TIBCO-BW-Version: 6.5.0 V63 2018-08-08
